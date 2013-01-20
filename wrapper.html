@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script><script src="script.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/><title>Math Grapher</title>	
+  </head>
+  <body>
+  <div class="content">
+	<div class="logo">
+		<h1>MATH GRAPHER</h1>
+		<iframe id="graph" src="/~jnewlin/pennapps">
+		</iframe>
+	</div>
+	<div class="typeofequation">
+		<div id="paren">
+			<img src="paren.png"/>
+		</div>
+		<div id="paren2">
+			<img src="paren2.png"/>
+		</div>
+		<div id="toetitle">TYPE OF EQUATION</div>
+		<div id="paramtitle">PARAMETERS</div>
+		<div class="b" id="buttonsor">SOLIDS OF REVOLUTION</div>
+		<div class="b" id="buttonli">LINE INTEGRAL</div>
+		<div class="b" id="buttondd">DIRECTIONAL DERIVATIVE</div>
+		<div class="b" id="buttonvf">VECTOR FIELD</div>
+		<div class="b" id="buttonti">TRIPLE INTEGRAL</div>
+		<div class="b" id="buttonsi">SURFACE INTEGRAL</div>
+	</div>
+	
+
+
+	<div class="parameters" id="sorparameters">
+		<form class="sorform" name="sorform" method="post" action="index.html">
+			<label>TOP FUNCTION</label><br/>
+			<input type="text" name="sortopfunction" id="sortopfunction"/>
+		</form>
+		<form class="sorform" name="sorform" method="post" action="index.html">
+			<label>BOTTOM FUNCTION</label><br/>
+			<input type="text" name="sorbottomfunction" id="sorbottomfunction"/>
+		</form>
+		<form class="sorform" name="sorform" method="post" action="index.html">
+			<label>LEFT BOUND</label><br/>
+			<input type="text" name="sorleftbound" id="sorleftbound"/>
+		</form>
+		<form class="sorform" name="sorform" method="post" action="index.html">
+			<label>RIGHT BOUND</label><br/>
+			<input type="text" name="sorrightbound" id="sorrightbound"/>
+		</form>
+		<form class="sorform" name="sorform" method="post" action="index.html">
+			<label>AXIS</label><br/>
+			<input type="text" name="soraxis" id="soraxis"/>
+		</form>
+	</div>
+	
+	<div class="parameters" id="liparameters">
+		<form class="liform" name="liform" method="post" action="index.html">
+			<label>PARAMETRIC LINE</label><br/>
+			<input type="text" name="liparametricline" id="liparametricline"/>
+		</form>
+		<form class="liform" name="liform" method="post" action="index.html">
+			<label>START TIME</label><br/>
+			<input type="text" name="listarttime" id="listarttime"/>
+		</form>
+		<form class="liform" name="liform" method="post" action="index.html">
+			<label>END TIME</label><br/>
+			<input type="text" name="liendtime" id="liendtime"/>
+		</form>
+		<form class="liform" name="liform" method="post" action="index.html">
+			<label>SURFACE FUNCTION</label><br/>
+			<input type="text" name="lisurfaceunction" id="lisurfacefunction"/>
+		</form>
+	</div>
+	
+	<div class="parameters" id="ddparameters">
+		<form class="ddform" name="ddform" method="post" action="index.html">
+			<label>SURFACE FUNCTION</label><br/>
+			<input type="text" name="ddsurfacefunction" id="ddsurfacefunction"/>
+		</form>
+		<form class="ddform" name="ddform" method="post" action="index.html">
+			<label>DIRECTION VECTOR</label><br/>
+			<input type="text" name="dddirectionvector" id="dddirectionvector"/>
+		</form>
+	</div>	
+		
+	<div class="parameters" id="vfparameters">
+		<form class="vfform" name="vfform" method="post" action="index.html">
+			<label>VECTOR VALUE FUNCTION </label><br/>
+			<input type="text" name="vfvectorvaluefunction" id="vfvectorvaluefunction"/>
+		</form>
+	</div>
+	
+	<div class="parameters" id="tiparameters">
+		<form class="tiform" name="tiform" method="post" action="index.html">
+			<label>FUNCTION</label><br/>
+			<input type="text" name="tifunction" id="tifunction"/>
+		</form>
+		<form class="tiform" name="tiform" method="post" action="index.html">
+			<label>XBOUNDS</label><br/>
+			<input type="text" name="tixbounds" id="tixbounds"/>
+		</form>
+		<form class="tiform" name="tiform" method="post" action="index.html">
+			<label>YBOUNDS</label><br/>
+			<input type="text" name="tiybounds" id="tiybounds"/>
+		</form>
+		<form class="tiform" name="tiform" method="post" action="index.html">
+			<label>ZBOUNDS</label><br/>
+			<input type="text" name="tizbounds" id="tizbounds"/>
+		</form>
+	</div>
+		
+		
+		<div id="graphbut">GRAPH</div>
+	</div>
+	</div>
+  </body>
+</html>
