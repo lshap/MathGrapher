@@ -1,12 +1,14 @@
 body{
-	background-image: url('grid1in.png');
+	background-image: url('grid.5.png');
 }
 
 .content {
 	position: relative;
-	width: 660px;
+	width: 700px;
 	left:50%;
-	margin-left: -330px;
+	margin-left: -400px;
+	margin-right:0;
+	padding:0;
 }
 
 .logo {
@@ -17,6 +19,10 @@ body{
 	left: 440px;
 }
 
+h1{
+	position: absolute;
+	left: 165px;
+}
 .typeofequation {
 	position: absolute;
 	left: 0px;
@@ -101,6 +107,48 @@ body{
 	border-width:8px;
 }
 
+
+#xt input{
+	position:absolute;
+	width: 60px;
+	top:35px;
+	left: 10px;
+}
+	
+#xt label{
+	position:absolute;
+	width: 60px;
+	top:12px;
+	left: 10px;
+}
+#yt input{
+	position: absolute;
+	width: 60px;
+	left: 75px;
+	top: 35px;
+}
+
+#yt label{
+	position:absolute;
+	width: 60px;
+	top:12px;
+	left: 75px;
+}
+
+#zt input{
+	position: absolute;
+	width: 60px;
+	left:140px;
+	top:35px;	
+}
+
+#zt label{
+	position:absolute;
+	width: 60px;
+	top:12px;
+	left: 140px;
+}
+
 .parameters {
 	position: absolute;
 	width: 210px;
@@ -132,3 +180,9 @@ body{
 	left: 160px;
 }
 
+#names{
+	position: absolute;
+	left: 38px;
+	bottom: 31px;
+	font: bold 15px arial, sans-serif; 
+}

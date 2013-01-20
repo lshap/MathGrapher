@@ -93,7 +93,6 @@ $(document).ready(function(){
 
 	$("#graphbut").click(function(){
 	var empt="";
-	
 		if (button == "sor"){
 			//Top Button
 			var TopFunctionIn=$("#sortopfunction").val();
@@ -127,11 +126,20 @@ $(document).ready(function(){
 		}
 		else if (button == "li"){
 			//Parametric Line
-			var ParametricLineIn=$("#liparametricline").val();
-			if (ParametricLineIn==''){
-				empt=empt+"Parametric Line, ";
+			var xtIn=$("#lixt").val();
+			if (xtIn==''){
+				empt=empt+"xt, ";
 			}
-		
+			var ytIn=$("#liyt").val();
+			if (ytIn==''){
+				empt=empt+"yt, ";
+			}
+			
+			var ztIn=$("#lizt").val();
+			if (ztIn==''){
+				empt=empt+"zt, ";
+			}
+			
 			//Start Time
 			var StartTimeIn=$("#listarttime").val();
 			if (StartTimeIn==''){
@@ -164,9 +172,14 @@ $(document).ready(function(){
 			}
 		}else if (button == "vf"){
 			//Vector Value Function
-			var VectorValueIn=$("#vfvectorvaluefunction").val();
-			if (VectorValueIn==''){
-				empt=empt+"Vector Value Function, ";
+			var XValueIn=$("#xvectorvaluefunction").val();
+			if (XValueIn==''){
+				empt=empt+"X Component Function, ";
+			}
+			
+			var YValueIn=$("#yvectorvaluefunction").val();
+			if (YValueIn==''){
+				empt=empt+"Y Component Function, ";
 			}
 		}else if (button == "ti"){
 			//Function
@@ -196,37 +209,43 @@ $(document).ready(function(){
 		if (empt != ""){
 			alert(empt + "cannot be empty");
 		}else{
-		
+			$("#graph").remove();
+			if( button == "li"){
+				$(".logo").prepend('<iframe id="graph" src="/~jnewlin/pennapps?xoft='+xtIn+'&yoft='+ytIn+'&zoft='+ztIn+'&t0='+StartTimeIn+'&t1='+EndTimeIn+'&fnstring='+SurfaceFunctionIn+'"></iframe>');
+			}
+			else if (button == "vf"){
+				$(".logo").prepend('<iframe id="graph" src="/~jnewlin/pennapps/vectorfield.html?vectorfn1='+XValueIn+'&vectorfn2='+YValueIn+'"></iframe>');
+			}
 			//displays input variables
-			$("#graph").contents().find("#here").append(TopFunctionIn);
+			/*$("#graph").contents().find("#variablescript").append(TopFunctionIn);
 			
-			$("#graph").contents().find("#here").append(BottomFunctionIn);
+			$("#graph").contents().find("#variablescript").append(BottomFunctionIn);
 			
-			$("#graph").contents().find("#here").append(LeftBoundIn);
+			$("#graph").contents().find("#variablescript").append(LeftBoundIn);
 			
-			$("#graph").contents().find("#here").append(RightBoundIn);
+			$("#graph").contents().find("#variablescript").append(RightBoundIn);
 		
-			$("#graph").contents().find("#here").append(AxisIn);
+			$("#graph").contents().find("#variablescript").append(AxisIn);
 		
-			$("#graph").contents().find("#here").append(ParametricLineIn);
+			$("#graph").contents().find("#variablescript").append(ParametricLineIn);
 		
-			$("#graph").contents().find("#here").append(StartTimeIn);
+			$("#graph").contents().find("#variablescript").append(StartTimeIn);
 		
-			$("#graph").contents().find("#here").append(EndTimeIn);
+			$("#graph").contents().find("#variablescript").append(EndTimeIn);
 		
-			$("#graph").contents().find("#here").append(SurfaceFunctionIn);
+			$("#graph").contents().find("#variablescript").prepend('var fnstring = "' + SurfaceFunctionIn +'";').reload(true);
+
+			$("#graph").contents().find("#variablescript").append(DirectionVectorIn);
 		
-			$("#graph").contents().find("#here").append(DirectionVectorIn);
+			$("#graph").contents().find("#variablescript").append(VectorValueIn);
 		
-			$("#graph").contents().find("#here").append(VectorValueIn);
+			$("#graph").contents().find("#variablescript").append(FunctionIn);
 		
-			$("#graph").contents().find("#here").append(FunctionIn);
+			$("#graph").contents().find("#variablescript").append(XBoundsIn);
 		
-			$("#graph").contents().find("#here").append(XBoundsIn);
+			$("#graph").contents().find("#variablescript").append(YBoundsIn);
 		
-			$("#graph").contents().find("#here").append(YBoundsIn);
-		
-			$("#graph").contents().find("#here").append(ZBoundsIn);
+			$("#graph").contents().find("#variablescript").append(ZBoundsIn);*/
 		}
 	});
 });
